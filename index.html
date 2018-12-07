@@ -1,0 +1,1492 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <style amp-custom>
+  /* any custom style goes here */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+amp-img {
+    background-color: transparent;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2 {
+  color: #000;
+  font-weight: 600;
+}
+
+h4 {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+h5 {
+  color: #626262;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul {
+  letter-spacing: 1px;
+  list-style: none;
+}
+
+p {
+  color: #505050;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+span {
+  letter-spacing: 1px;
+}
+
+.fa {
+  font-size: 13px;
+}
+
+.img-fluid {
+  height: 60px;
+  margin-bottom: 30px;
+  width: 60px;
+}
+
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn {
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.fa {
+  font-size: 13px;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #71c55d;
+  line-height: 1;
+  color: #fff;
+  padding: 7px 12px 13px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: #71c55d;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #55b03f;
+  color: #fff;
+}
+
+
+.amp-sidebar-toolbar-target-shown {
+      display: none;
+}
+
+
+#sidebar1{
+  width: 10em;
+  font-size: 25px;
+}
+
+#sidebar1 ul{
+  text-align: center;
+  padding: 8px 0px 8px 0.4em;
+}
+
+#sidebar1 ul li a{
+  text-decoration: none;
+  color:black;
+  margin-top: : 2em;
+
+
+}
+
+#side-close{
+  margin-top: 0.5em;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+.hamburger{
+  display: none;
+  float:right;
+  z-index:1;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1000px){
+  .hamburger{
+    display: inline-block;
+    margin-top: 0.7em;
+    margin-right: 0.5em;
+  }
+}
+
+
+#header {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 48px;
+  padding-left: 10em;
+  box-shadow: 0 0 10px black;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+#header #logo {
+  padding: 6px 0 0 0;
+}
+
+#header #logo h1 {
+  color: #505050;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#header #logo h1 a {
+  color: #555;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#header #logo h1 a span {
+  color: #71c55d;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+#cssmenu {
+  background: transparent;
+  width: auto;
+  text-align: right;
+  display: inline;
+  position: absolute;
+  right:0;
+  top:0;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+}
+
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #71c55d;
+  cursor: pointer;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #71c55d;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+
+#cssmenu ul li.active a {
+  color: #333333;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  #header{
+    padding-left: 2em;
+  }
+
+
+  #cssmenu{
+    display:none;
+  }
+  
+
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
+
+#hero {
+  width: 100%;
+  height: calc(100vh - 40px);
+  background: url(../img/hero-bg.png) center bottom no-repeat;
+  background-size: 100%;
+  position: relative;
+  margin-top: 40px;
+  animation: fadeIn 2s;
+
+}
+
+@media (min-width: 1025px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  font-family: "Philosopher", sans-serif;
+  color: #71c55d;
+}
+
+#hero .hero-container #img-hero1{
+    display:block;
+}
+
+  #hero .hero-container #img-hero2{
+    display:none;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero .hero-container #img-hero1{
+    display:none;
+  }
+
+  #hero .hero-container #img-hero2{
+    display:block;
+  }
+}
+
+#hero h2 {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#hero img {
+  max-width: 95%;
+  margin-bottom: 30px;
+}
+
+#hero .btn-get-started {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: 2px solid #71c55d;
+  background: #fff;
+  color: #71c55d;
+  text-decoration: none;
+}
+
+#hero .btn-get-started:hover {
+  background: #71c55d;
+  color: #fff;
+}
+
+#hero .btns a {
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 4px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #hero .btns a {
+    margin: 4px 8px;
+  }
+}
+
+#hero .btns a:hover {
+  color: #71c55d;
+}
+
+.padd-section {
+  padding-bottom: 80px;
+  padding-top: 80px;
+  animation: fadeInUp 1s;
+}
+
+@media (max-width: 992px) {
+  .padd-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section-title {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+.section-title h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.section-title .separator {
+  margin: 0;
+}
+
+.separator {
+  color: #626262;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+/* Bootstrap Inherited
+--------------------------------*/
+.text-center{text-align:center}
+
+
+.col-md-6{
+  min-height:1px;
+  padding-right:15px;
+  padding-left:15px
+  -ms-flex:0 0 50%;
+  flex:0 0 50%;
+  max-width:50%
+}
+
+.container{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto}
+  @media (min-width:576px){
+    .container{max-width:540px}}
+  @media (min-width:768px){
+    .container{max-width:720px}}
+  @media (min-width:992px){
+    .container{max-width:960px}}
+  @media (min-width:1200px){
+    .container{max-width:1140px}}
+
+.section-title-row{
+  display: inline-flex;
+    justify-content: space-evenly;
+    width:60%;
+}
+
+.section-title-row1{
+  display: inline-flex;
+    justify-content: space-evenly;
+    width:50%;
+}
+@media screen and (max-width: 1000px){
+.section-title-row{
+  display: block;
+    width: 100%; 
+}
+
+.section-title-row1{
+  display: block;
+    width: 100%; 
+}
+
+.col-md-6{
+  min-height:1px;
+  padding-right:0px;
+  -ms-flex:0 0 50%;
+  flex:0 0 50%;
+  max-width:100%
+}
+
+
+}
+
+
+/* Get Started Section
+--------------------------------*/
+.img-fluid {
+  height: 60px;
+  margin-bottom: 30px;
+  width: 60px;
+}
+
+
+#get-started {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+#get-started .feature-block {
+  background: #fff none repeat scroll 0 0;
+  padding: 30px 20px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media (max-width: 991px) {
+  #get-started .feature-block {
+    margin-bottom: 30px;
+  }
+}
+
+#get-started .feature-block:hover {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#get-started .feature-block h4 {
+  margin-bottom: 20px;
+}
+
+#get-started .feature-block p {
+  margin-bottom: 20px;
+}
+
+#get-started .feature-block a {
+  color: #505050;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+#get-started .feature-block a:hover {
+  color: #71c55d;
+}
+
+#about-us{
+  display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column-left{
+    float: left;
+    text-align: right;
+    width: 45%;
+    padding: 10px;
+    height: 100%; 
+}
+
+.column-right {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    height: 100%; 
+}
+
+.row:after {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 1000px){
+.row{
+  display: block;
+}
+
+.column-left{
+  width: 100%;
+}
+
+#about-us img{
+  width: 100%;
+}
+.column-right{
+  width: 100%;
+}
+
+}
+
+
+#about-us img {
+  max-width: 100%;
+  height:35em;
+}
+
+#about-us .about-content {
+  padding-top: 60px;
+}
+
+#about-us .about-content h2 {
+  color: #252525;
+  font-family: "roboto";
+  font-size: 39px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+#about-us .about-content span {
+  font-weight: 700;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+
+#about-us .about-content ul li {
+  line-height: 36px;
+  color: #626262;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+#about-us .about-content ul li .fa {
+  padding-right: 20px;
+}
+
+
+/* Features Section
+--------------------------------*/
+#features {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+#features .feature-block {
+  background: #fff none repeat scroll 0 0;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#features .feature-block:hover {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#features .feature-block h4 {
+  margin-bottom: 20px;
+}
+
+#features .feature-block p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px){
+
+.carousel-img{
+    width: 20em;
+    height: 700px;
+}
+
+#c-preview{
+  display: none;
+}
+}
+
+#video {
+  background: url(img/video-bg.jpg) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+}
+
+#video .overlay {
+  background: rgba(0, 0, 0, 0.85);
+  height: 100%;
+}
+
+#video .overlay .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#71c55d 50%, rgba(113, 197, 93, 0.15) 52%);
+  border-radius: 50%;
+  display: block;
+  margin: 153px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#video .overlay .play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#video .overlay .play-btn:before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+#video .overlay .play-btn:hover::after {
+  border-left: 15px solid #71c55d;
+  -webkit-transform: scale(20);
+  transform: scale(20);
+}
+
+#video .overlay .play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulsate2 {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    transform: scale(0.1, 0.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.video-container{
+  width:100%;
+  text-align: center;
+  background-color:black;
+  height: 100vh;
+}
+
+
+.video-container i{
+  position: absolute;
+  border-radius: 23px;
+  background-color: white;
+  color: #71c55d;
+  opacity: 1;
+  z-index: 100;
+
+}
+
+@media (max-width: 1000px) {
+
+  .video-container{
+    padding-top:9em;
+  }
+
+  .video-container iframe{
+    width:350px;
+    height:300px;
+  }
+  .video-container i{
+    top:0;
+    right:0;
+  }
+
+}
+
+
+
+/* Team Section
+--------------------------------*/
+#team .team-block {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  height: 254px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  #team .team-block {
+    margin-bottom: 30px;
+  }
+}
+
+#team .team-block img {
+  width: 100%;
+}
+
+#team .team-block .team-content {
+  background: #fff none repeat scroll 0 0;
+  bottom: 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+  bottom: -147px;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#team .team-block .team-content ul {
+  display: inline-flex;
+  width: 100%;
+}
+
+
+#team .team-block .team-content ul > span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#team .team-block:hover .team-content {
+  bottom: 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.scrollToTop {
+    color: #fafafa;
+    font-size: 1.4em;
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background: #71c55d;
+    z-index: 9999;
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+
+  }
+  #marker {
+    position: absolute;
+    top: 100px;
+    width: 0px;
+    height: 0px;
+  }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+</style>
+ 
+  </head>
+  <body>
+
+    <div id='header'>
+      <button class="hamburger" on='tap:sidebar1.toggle'><i class="fas fa-bars fa-2x"></i></button>
+    <div id="logo">
+        <h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>
+    </div>
+
+
+    <div id='cssmenu'>
+      <ul>
+        <li><a on="tap:top-page.scrollTo(duration=200)"><span>Home</span></a></li>
+        <li><a on="tap:about-us.scrollTo(duration=200)"><span>About</span></a></li>
+        <li><a on="tap:features.scrollTo(duration=200)"><span>Features</span></a></li>
+        <li><a on="tap:screenshots.scrollTo(duration=200)"><span>Screenshots</span></a></li>
+        <li><a on="tap:team.scrollTo(duration=200)"><span>Team</span></a></li>
+        <li><a ><span>Pricing</span></a></li>
+        <li><a ><span>Drop Down</span></a></li>
+        <li><a ><span>Blogs</span></a></li>
+        <li><a ><span>Contact</span></a></li>
+        <li class='last'><a href='#'><span>Contact</span></a></li>
+        </ul>
+    </div> 
+    </div>
+
+
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+        <button id='side-close' on='tap:sidebar1.close'><i class="fas fa-times fa-2x"></i></button>
+        <ul>
+          <li><a href="#top-page" on="tap:top-page.scrollTo">Home</a></li>
+          <li><a href="#about-us" on="tap:about-us.scrollTo">About</a></li>
+          <li><a href="#features" on="tap:features.scrollTo">Features</a></li>
+          <li><a href="#screenshots" on="tap:screenshots.scrollTo">Screenshots</a></li>
+          <li><a href="#team" on="tap:team.scrollTo(">Team</a></li>
+        </ul>
+    </amp-sidebar>
+
+    
+
+    <div id="top-page"></div>
+    <div id="marker">
+      <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+      </amp-position-observer>
+    </div>
+      <button id="scrollToTopButton" on="tap:top-page.scrollTo(duration=200)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></button>
+
+    <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to eStartups</h1>
+      <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2> 
+      <amp-img id='img-hero1'src="img/hero-img.jpg" alt="Hero-Imgs" width="700" height="400"></amp-img>
+      <amp-img id='img-hero2'src="img/hero-img.jpg" alt="Hero-Imgs" width="350" height="200"></amp-img>
+      <a href="#" class="btn-get-started scrollto">Get Started</a>
+      <div class="btns">
+        <a href="#"><i class="fab fa-apple 1a-2x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play 1a-2x"></i> Google Play</a>
+        <a href="#"><i class="fab fa-windows 1a-2x"></i> windows</a>
+      </div>
+    </div>
+    </section>
+    <section id="get-started" class="padd-section text-center wow ">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>simple systeme fordiscount </h2>
+        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-title-row">
+
+        <div class="col-md-6">
+          <div class="feature-block">
+
+            <amp-img src="img/cloud.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>introducing whatsapp</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+
+            <amp-img src="img/planet.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>user friendly interface</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+
+            <amp-img src="img/asteroid.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>build the app everyone love</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <a href="#">read more</a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section id='about-us'>
+    <div class="container">
+        <div class="row">
+          <div class="column-left">
+            <amp-img src="img/about-img.jpg" width='300' height='600'  alt="About"></amp-img>
+          </div>
+          <div class="column-right">
+             <div class="about-content">
+                <h2><span>eStartup</span>UI Design Mobile </h2>
+                  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                  </p>
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>Creative Design</li>
+              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
+              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
+              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+            </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="features" class="padd-section text-center wow " style="visibility: visible; animation-name: ;">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Amazing Features.</h2>
+        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-title-row1">
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/paint-palette.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>creative design</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/vector.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>Retina Ready</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/design-tool.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>easy to use</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/asteroid.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>Free Updates</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-title-row1">
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/asteroid.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>Free Updates</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/cloud-computing.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>App store support</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/pixel.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>Perfect Pixel</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="feature-block">
+            <amp-img src="img/code.jpg" width='65' height='65' alt="img" class="img-fluid"></amp-img>
+            <h4>clean codes</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="screenshots" class="padd-section text-center wow " style="visibility: visible; animation-name: ;">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>App Gallery</h2>
+        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <amp-carousel id="carousel-with-preview"
+    width="300"
+    height="150"
+    layout="responsive"
+    type="slides">
+    <amp-img class='carousel-img' src="img/images/1.jpg"
+      width="300"
+      height="100"
+      layout="responsive"
+      ></amp-img>
+    <amp-img class='carousel-img' src="img/images/2.jpg"
+      width="300"
+      height="150"
+      layout="responsive"
+      ></amp-img>
+    <amp-img class='carousel-img' src="img/images/3.jpg"
+      width="450"
+      height="300"
+      layout="responsive"
+      ></amp-img>
+  </amp-carousel>
+
+  <div class="carousel-preview">
+    <button id='c-preview' on="tap:carousel-with-preview.goToSlide(index=0)">
+      <amp-img src="img/images/1.jpg"
+        width="60"
+        height="40"
+        ></amp-img>
+    </button>
+    <button id='c-preview' on="tap:carousel-with-preview.goToSlide(index=1)">
+      <amp-img src="img/images/2.jpg"
+        width="60"
+        height="40"
+        ></amp-img>
+    </button>
+    <button id='c-preview' on="tap:carousel-with-preview.goToSlide(index=2)">
+      <amp-img src="img/images/3.jpg"
+        width="60"
+        height="40"
+        ></amp-img>
+    </button>
+  </div>
+    </div>
+  </section>
+
+  <section id="video" class="text-center wow " style="visibility: visible; animation-name: ;">
+    <div class="overlay">
+      <div class="container-fluid container-full">
+
+        <div class="section-title-row">
+          <button class="play-btn ampstart-btn caps m2" on="tap:my-lightbox" role="button" tabindex="1" data-video-id="s22ViV7tBKE"></button>
+        </div>
+
+      </div>
+    </div>
+
+    <amp-lightbox id="my-lightbox" layout="nodisplay">
+       <div class="lightbox" on="tap:my-lightbox.close" role="button" tabindex="0">
+            <div class='video-container'>
+            <a href="#" on="tap:my-lightbox.close"><i class="fas fa-times-circle fa-2x"></i></a>
+            <amp-iframe width="300" title="Netflix House of Cards branding: The Stack"
+                          height="181"
+                          layout="responsive"
+                          sandbox="allow-scripts allow-same-origin allow-popups"
+                          allowfullscreen
+                          frameborder="0"
+                          src="https://www.youtube.com/embed/s22ViV7tBKE">
+            </amp-iframe>
+          
+          </div>
+
+          
+          
+        </div>
+    </amp-lightbox>
+  </section>
+
+ 
+
+    
+
+  <!--==========================
+    Team Section
+  ============================-->
+  <section id="team" class="padd-section text-center wow ">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Team Member</h2>
+        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-title-row">
+
+        <div class="col-md-6">
+          <div class="team-block">
+            <amp-img src="img/team/1.jpg" width='330' height='300' class="img-responsive" layout="responsive" alt="img"></amp-img>
+            <div class="team-content">
+              <span>Manager</span>
+              <h4>Kimberly Tran</h4>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-md-6">
+          <div class="team-block">
+            <amp-img src="img/team/2.jpg" width='330' height='300' class="img-responsive" layout="responsive" alt="img"></amp-img>
+            <div class="team-content">
+              <span>Manager</span>
+              <h4>Kimberly Tran</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="team-block">
+            <amp-img src="img/team/3.jpg" width='330' height='300' class="img-responsive" layout="responsive" alt="img"></amp-img>
+            <div class="team-content">
+              <span>Manager</span>
+              <h4>Kimberly Tran</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="team-block">
+            <amp-img src="img/team/4.jpg" width='330' height='300' class="img-responsive" layout="responsive" alt="img"></amp-img>
+            <div class="team-content">
+              <span>Manager</span>
+              <h4>Kimberly Tran</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <amp-animation id="showAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "1",
+          "visibility": "visible"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "0",
+          "visibility": "hidden"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+
+
+
+
+
+  
+
+
+
+
+  </body>
+</html>
